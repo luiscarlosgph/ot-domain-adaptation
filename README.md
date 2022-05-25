@@ -6,14 +6,14 @@ Install with pip
 ----------------
 
 ```bash
-$ python3 -m pip install otda
+$ python3 -m pip install otda --user
 ```
 
 Install from source
 -------------------
 
 ```bash
-$ python3 setup.py install
+$ python3 setup.py install --user
 ```
 
 Exemplary code snippet
