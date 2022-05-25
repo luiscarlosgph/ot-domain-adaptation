@@ -42,6 +42,7 @@ Some examples of the colour adaptation
             <th>Target domain image</th>
             <th>Method</th>
             <th>Output</th>
+            <th>Computation time</th>
         </tr>
     </thead>
     <tbody>
@@ -52,18 +53,22 @@ Some examples of the colour adaptation
         <tr>
             <td>Linear</td>
             <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_linear.jpg?raw=true" width=640></td>
+            <td>0.086s</td>
         </tr>
         <tr>
             <td>Gaussian (n=1000)</td>
             <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_gaussian.jpg?raw=true" width=640></td>
+            <td>19.194s</td>
         </tr>
         <tr>
             <td>Sinkhorn (n=1000)</td>
             <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_sinkhorn.jpg?raw=true" width=640></td>
+            <td>30.736s</td>
         </tr>
         <tr>
             <td>Earth mover's distance (n=1000)</td>
             <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_emd.jpg?raw=true" width=640></td>
+            <td>22.988</td>
         </tr>
     </tbody>
 </table>
