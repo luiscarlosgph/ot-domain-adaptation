@@ -29,7 +29,44 @@ Run domain adaptation on a single image
 ```bash
 $ python3 -m otda.run --source source.jpg --target target.jpg --output output.jpg --method emd
 ```
-Available methods: linear, linear_fourier, gaussian, sinkhorn, emd.
+Available methods: linear, gaussian, sinkhorn, emd.
+
+
+Some examples of the colour adaptation
+--------------------------------------
+
+<table>
+    <thead>
+        <tr>
+            <th>Source image</th>
+            <th>Target domain image</th>
+            <th>Method</th>
+            <th>Output</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=5><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/source1.jpg?raw=true" width=640></td>
+            <td rowspan=5><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/target1.jpg?raw=true" width=640></td>
+        </tr>
+        <tr>
+            <td>Linear</td>
+            <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_linear.jpg?raw=true" width=640></td>
+        </tr>
+        <tr>
+            <td>Gaussian</td>
+            <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_gaussian.jpg?raw=true" width=640></td>
+        </tr>
+        <tr>
+            <td>Sinkhorn</td>
+            <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_sinkhorn.jpg?raw=true" width=640></td>
+        </tr>
+        <tr>
+            <td>Earth mover's distance (EMD)</td>
+            <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_emd.jpg?raw=true" width=640></td>
+        </tr>
+    </tbody>
+</table>
 
 
 License
