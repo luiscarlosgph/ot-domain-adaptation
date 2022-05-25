@@ -54,7 +54,7 @@ Some examples of the colour adaptation
             <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_linear.jpg?raw=true" width=640></td>
         </tr>
         <tr>
-            <td>Gaussian</td>
+            <td>Gaussian (n=1000)</td>
             <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_gaussian.jpg?raw=true" width=640></td>
         </tr>
         <tr>
