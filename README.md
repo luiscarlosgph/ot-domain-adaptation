@@ -22,6 +22,11 @@ Exemplary code snippet
 ```python         
 import otda
 
+# Read source and target images
+source_im = cv2.imread('source.jpg')
+target_im = cv2.imread('target.jpg')
+
+# Perform domain adaptation
 adapted_im = otda.colour_transfer(source_im, target_im, method='linear', nsamples=1000)
 ```
 
