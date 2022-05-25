@@ -58,11 +58,11 @@ Some examples of the colour adaptation
             <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_gaussian.jpg?raw=true" width=640></td>
         </tr>
         <tr>
-            <td>Sinkhorn</td>
+            <td>Sinkhorn (n=1000)</td>
             <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_sinkhorn.jpg?raw=true" width=640></td>
         </tr>
         <tr>
-            <td>Earth mover's distance (EMD)</td>
+            <td>Earth mover's distance (n=1000)</td>
             <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_emd.jpg?raw=true" width=640></td>
         </tr>
     </tbody>
