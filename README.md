@@ -68,7 +68,7 @@ Some examples of the colour adaptation
         <tr>
             <td>Earth mover's distance (n=1000)</td>
             <td><img src="https://github.com/luiscarlosgph/ot-domain-adaptation/blob/main/images/output1_emd.jpg?raw=true" width=640></td>
-            <td>22.988</td>
+            <td>22.988s</td>
         </tr>
     </tbody>
 </table>
