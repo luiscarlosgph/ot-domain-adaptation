@@ -19,7 +19,9 @@ $ python3 setup.py install --user
 Exemplary code snippet
 ----------------------
 
-```python                                                                                                      
+```python         
+import otda
+
 adapted_im = otda.colour_transfer(source_im, target_im, method='linear', nsamples=1000)
 ```
 
