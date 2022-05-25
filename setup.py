@@ -23,6 +23,7 @@ setuptools.setup(name='otda',
     },
     install_requires=[
       'numpy',
+      'pot',
       'opencv-python',
     ],
     long_description=long_description,

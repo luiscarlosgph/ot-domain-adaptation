@@ -30,8 +30,10 @@ def otda(source_im: np.ndarray, target_im: np.ndarray, method: str = 'linear',
     """
 
     # Flatten the images
-    source_flat = source_im.reshape((source_im.shape[0] * source_im.shape[1], source_im.shape[2]))
-    target_flat = target_im.reshape((target_im.shape[0] * target_im.shape[1], target_im.shape[2]))
+    source_flat = source_im.reshape((source_im.shape[0] * source_im.shape[1], 
+                                     source_im.shape[2]))
+    target_flat = target_im.reshape((target_im.shape[0] * target_im.shape[1], 
+                                     target_im.shape[2]))
 
     # Normalise to range [0, 1]
     source_norm = source_flat.astype(np.float64) / 255.
