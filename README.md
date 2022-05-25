@@ -19,8 +19,8 @@ $ python3 setup.py install --user
 Exemplary code snippet
 ----------------------
 
-```python
-
+```python                                                                                                      
+adapted_im = otda.colour_transfer(source_im, target_im, method='linear', nsamples=1000)
 ```
 
 Run domain adaptation on a single image
@@ -31,12 +31,6 @@ $ python3 -m otda.run --source source.jpg --target target.jpg --output output.jp
 ```
 Available methods: linear, linear_fourier, gaussian, sinkhorn, emd.
 
-
-Run unit tests
---------------
-```
-$ python3 tests/test_otda.py
-```
 
 License
 -------
