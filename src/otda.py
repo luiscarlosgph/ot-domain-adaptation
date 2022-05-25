@@ -10,10 +10,11 @@ import numpy as np
 import cv2 
 import random
 import ot
+import fda
 
 
-def otda(source_im: np.ndarray, target_im: np.ndarray, method: str = 'linear',
-         nsamples:int = 1000):
+def colour_transfer(source_im: np.ndarray, target_im: np.ndarray, 
+                    method: str = 'linear', nsamples:int = 1000):
     """
     @brief Adapt the source image to the domain of the target image.
 
@@ -46,25 +47,7 @@ def otda(source_im: np.ndarray, target_im: np.ndarray, method: str = 'linear',
         mapping.fit(Xs=source_norm, Xt=target_norm)
         adapted = np.clip(mapping.transform(Xs=source_norm), 0, 1)
         adapted_im = np.round(adapted * 255.).astype(np.uint8).reshape(source_im.shape)
-
-    elif method == 'linear_fourier': 
-        mapping = ot.da.LinearTransport()
-
-        adapted_im = np.empty_like(source_im)
-        for k in range(3):
-            amp_s, phase_s = fourier.fft_amp_phase(source_im[:, :, k])
-            amp_t, phase_t = fourier.fft_amp_phase(target_im[:, :, k])
-
-            amp_s = amp_s.flatten() 
-            amp_t = amp_t.flatten() 
-            amp_s = amp_s.reshape((amp_s.shape[0], 1))
-            amp_t = amp_t.reshape((amp_t.shape[0], 1))
-
-            mapping.fit(Xs=amp_s, Xt=amp_t)
-            amp_s_adapted = mapping.transform(Xs=amp_s).reshape((adapted_im.shape[0], adapted_im.shape[1]))
-            
-            adapted_im[:, :, k] = fourier.ifft_amp_phase(amp_s_adapted, phase_s)
-
+    
     elif method == 'gaussian':
         mapping = ot.da.MappingTransport(mu=1e0, eta=1e-2, sigma=1, bias=False, max_iter=10)
         source_idx = np.random.randint(source_norm.shape[0], size=(nsamples,))

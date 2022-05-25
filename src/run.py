@@ -34,9 +34,12 @@ def parse_command_line_parameters(parser):
                         help = 'Path to the target image.')
     parser.add_argument('--output', required = True,
                         help = 'Path to the output image.')
-    parser.add_argument('--method', required = True, default = 'linear', 
-                        type = str,
+    parser.add_argument('--method', required = True, type = str,
                         help = 'Factor to regulate the degree of adaptation.')
+    parser.add_argument('--nsamples', required = False, default = 1000,
+                        type = int, 
+                        help = 'Number of pixels to estimate the transport.')
+    
     
     # Parse command line
     args = parser.parse_args()
@@ -64,7 +67,7 @@ def main():
     
     # Domain adaptation
     tic = time.time()
-    adapted_im = otda.otda(source_im, target_im, args.method)
+    adapted_im = otda.colour_transfer(source_im, target_im, args.method, args.nsamples)
     toc = time.time()
     print('Domain adaptation performed in ' + str(toc - tic) + ' seconds.')
     
